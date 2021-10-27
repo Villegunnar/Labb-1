@@ -7,28 +7,28 @@ namespace Labb_1
     {
         static void Main(string[] args)
         {
-            ConsoleSettings(23,100);
+            ConsoleSettings(23,100); 
             bool runProgram = true;
-            while (runProgram)
+            while (runProgram) // Loop som håller igång programmet
             {
                 Console.ForegroundColor = ConsoleColor.Yellow;
-                Console.WriteLine(String.Format("{0," + (Console.WindowWidth - 52) + "}", "Cirkel"));
+                Console.WriteLine(String.Format("{0," + (Console.WindowWidth - 52) + "}", "Cirkel")); // Titel Cirkel
                 Console.WriteLine();
-                Circle circle5 = new Circle(5);
-                Circle circle6 = new Circle(6);
+                Circle circle5 = new Circle(5); // Objekt
+                Circle circle6 = new Circle(6); // Objekt
                 Console.WriteLine("Arean på en cirkel med radien 5cm är:                              " + circle5.getArea() + "cm^2");
                 Console.WriteLine("Arean på en cirkel med radien 6cm är:                              " + circle6.getArea() + "cm^2");
                 Console.WriteLine();
                 Console.Write("Vänligen ange radien på en cirkel (cm): ");
                 double userRadie = Convert.ToDouble(Console.ReadLine());
-                Circle circle = new Circle(userRadie);
+                Circle circle = new Circle(userRadie);  // Objekt
                 Console.WriteLine();
                 Console.WriteLine("Omkretsen på en cirkel med radien " + userRadie + "cm är:                          " + circle.getCircumference() + "cm");
                 Console.WriteLine("Arean på en cirkel med radien " + userRadie + "cm är:                              " + circle.getArea() + "cm^2");
                 Console.WriteLine("Volymen för en sfär med raiden " + userRadie + "cm är:                             " + circle.getVolume() + "cm^3");
                 Console.WriteLine();
                 Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine(String.Format("{0," + (Console.WindowWidth - 52) + "}", "Triangel"));
+                Console.WriteLine(String.Format("{0," + (Console.WindowWidth - 52) + "}", "Triangel")); // Titel Triangel
                 Console.WriteLine();
                 Console.Write("Vänligen ange längden på första katetern (cm): ");
                 double userKatet1 = Convert.ToDouble(Console.ReadLine());
@@ -37,7 +37,7 @@ namespace Labb_1
                 Console.Write("Vänligen ange djupet på triangeln (cm): ");
                 double userDepth = Convert.ToDouble(Console.ReadLine());
 
-                Triangle triangle = new Triangle(userKatet1, userKatet2, userDepth);
+                Triangle triangle = new Triangle(userKatet1, userKatet2, userDepth); // Objekt
                 Console.WriteLine();
                 Console.WriteLine("Omkretsen på en triangel med kateterna " + userKatet1 + "cm och " + userKatet2 + "cm är:             " + triangle.getCircumference() + "cm");
                 Console.WriteLine("Arean på en triangel med kateterna " + userKatet1 + "cm och " + userKatet2 + "cm är:                 " + triangle.getArea() + "cm^2");
@@ -52,7 +52,7 @@ namespace Labb_1
 
             Console.WindowHeight = height;
             Console.WindowWidth = width;
-        }
+        }// Inställningarn för hur konsolrutan ser ut
 
     }
 
